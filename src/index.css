@@ -63,3 +63,32 @@ p, span, div {
     font-size: 2.1rem !important;
   }
 }
+/* ===== LOGO FIX - MOBILE ME CHHOTA, SIDE ME, 1 BAAR SAHI ===== */
+
+/* Jo bhi image logo wali hai, usko chhota kar do */
+img[src*="ardash_logo"] {
+  width: 56px !important;
+  height: 56px !important;
+  object-fit: contain !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+  flex-shrink: 0;
+}
+
+/* Laptop / Tablet me logo thoda bada */
+@media (min-width: 768px) {
+  img[src*="ardash_logo"] {
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px !important;
+    max-height: 72px !important;
+  }
+}
+
+/* Hero wali badi wali photo ko bhi mobile me limit karo */
+@media (max-width: 640px) {
+  img {
+    max-height: 380px;
+    object-fit: cover;
+  }
+}
