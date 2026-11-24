@@ -92,3 +92,7 @@ img[src*="ardash_logo"] {
     object-fit: cover;
   }
 }
+/* Hero wala 2nd logo hatao, sirf Navbar wala 1 logo rakho */
+section img[src*="ardash_logo"] {
+  display: none !important;
+}

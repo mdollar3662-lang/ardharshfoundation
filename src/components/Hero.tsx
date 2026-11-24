@@ -172,7 +172,7 @@ export const Hero: React.FC<HeroProps> = ({
   return (
     <section
       id="home"
-      className="relative min-h-[94vh] flex flex-col justify-between overflow-hidden bg-[#231F1C]"
+      className="relative min-h- flex flex-col justify-between overflow-hidden bg-[#231F1C]"
     >
       {/* Cinematic Background Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none bg-[#231F1C]">
@@ -191,28 +191,11 @@ export const Hero: React.FC<HeroProps> = ({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(35,31,28,0.72)_100%)]" />
       </div>
 
-      {/* Top Overlay Controls */}
-      <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 flex flex-wrap items-center justify-between gap-3">
-        <div className="inline-flex items-center gap-3 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-[#D9A441]/50 text-xs text-stone-200 shadow-xl">
-          <img
-            src={ASSETS.logo}
-            alt="ARDASH Foundation Emblem"
-            referrerPolicy="no-referrer"
-            className="w-8 h-8 rounded-full object-cover bg-white/10 p-0.5"
-          />
-          <div className="flex flex-col">
-            <span className="font-bold text-white tracking-wide text-xs sm:text-sm">
-              ARDASH FOUNDATION
-            </span>
-            <span className="text-[#D9A441] text-[10px] sm:text-[11px] font-medium hidden sm:inline">
-              Adivasi Rural Development Awareness Society for Humanity
-            </span>
-          </div>
-        </div>
-
+      {/* Top Overlay Controls - 2nd LOGO HATA DIYA, SIRF NAVBAR WALA LOGO RAHEGA */}
+      <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 flex flex-wrap items-center justify-end gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <div className="hidden md:inline-flex items-center p-1 rounded-full bg-black/70 backdrop-blur-md border border-[#D9A441]/40 shadow-xl text-xs">
-            <span className="px-2.5 py-1 text-[10px] font-semibold text-[#D9A441] flex items-center gap-1 uppercase tracking-wider whitespace-nowrap">
+            <span className="px-2.5 py-1 text- font-semibold text-[#D9A441] flex items-center gap-1 uppercase tracking-wider whitespace-nowrap">
               <Film className="w-3 h-3" />
               झारखंड वीडियो:
             </span>
@@ -221,7 +204,7 @@ export const Hero: React.FC<HeroProps> = ({
                 key={slide.id}
                 type="button"
                 onClick={() => setSlideIndex(idx)}
-                className={`px-2.5 py-1 rounded-full text-[11px] font-medium transition-all whitespace-nowrap shrink-0 ${
+                className={`px-2.5 py-1 rounded-full text- font-medium transition-all whitespace-nowrap shrink-0 ${
                   slideIndex === idx
                     ? 'bg-[#A63D32] text-white shadow-xs'
                     : 'text-stone-300 hover:text-white hover:bg-white/10'
@@ -246,7 +229,7 @@ export const Hero: React.FC<HeroProps> = ({
             <button
               type="button"
               onClick={() => setFilmModalOpen(true)}
-              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 text-[11px] text-[#D9A441] font-semibold transition-colors whitespace-nowrap shrink-0"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 text- text-[#D9A441] font-semibold transition-colors whitespace-nowrap shrink-0"
               title="Watch Full Jharkhand Rural Reality Documentary"
             >
               <Maximize2 className="w-3.5 h-3.5" />
@@ -255,7 +238,7 @@ export const Hero: React.FC<HeroProps> = ({
             <button
               type="button"
               onClick={toggleAmbientSound}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold transition-all whitespace-nowrap shrink-0 ${
+              className={`flex items-center gap-1.5 px-3 py-1 rounded-full text- font-semibold transition-all whitespace-nowrap shrink-0 ${
                 soundEnabled
                   ? 'bg-[#244B35] text-[#D9A441] border border-[#D9A441]'
                   : 'bg-white/10 text-stone-300 hover:text-white'
@@ -321,7 +304,7 @@ export const Hero: React.FC<HeroProps> = ({
               </span>
               <div>
                 <div className="text-xs font-bold text-white">Environment Protection</div>
-                <div className="text-[11px] text-[#D9A441]">पर्यावरण व वन संरक्षण</div>
+                <div className="text- text-[#D9A441]">पर्यावरण व वन संरक्षण</div>
               </div>
             </div>
 
@@ -331,7 +314,7 @@ export const Hero: React.FC<HeroProps> = ({
               </span>
               <div>
                 <div className="text-xs font-bold text-white">Sustainable Livelihood</div>
-                <div className="text-[11px] text-[#D9A441]">सतत आजीविका व कौशल</div>
+                <div className="text- text-[#D9A441]">सतत आजीविका व कौशल</div>
               </div>
             </div>
 
@@ -341,7 +324,7 @@ export const Hero: React.FC<HeroProps> = ({
               </span>
               <div>
                 <div className="text-xs font-bold text-white">Women Empowerment</div>
-                <div className="text-[11px] text-[#D9A441]">महिला स्वयं सहायता समूह</div>
+                <div className="text- text-[#D9A441]">महिला स्वयं सहायता समूह</div>
               </div>
             </div>
           </div>
@@ -426,7 +409,7 @@ export const Hero: React.FC<HeroProps> = ({
             <X className="w-6 h-6" />
           </button>
 
-          <div className="bg-[#231F1C] rounded-2xl max-w-4xl w-full overflow-hidden border border-[#D9A441]/40 shadow-2xl flex flex-col max-h-[92vh]">
+          <div className="bg-[#231F1C] rounded-2xl max-w-4xl w-full overflow-hidden border border-[#D9A441]/40 shadow-2xl flex flex-col max-h-">
             <div className="p-4 bg-black/60 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 <Film className="w-4 h-4 text-[#D9A441]" />
